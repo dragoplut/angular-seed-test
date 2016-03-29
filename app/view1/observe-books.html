@@ -1,0 +1,26 @@
+<p>This is the partial for view 1. {{pageView1.p1}}</p>
+<a ng-click="pageView1.showConsoleInfo()">showConsoleInfo</a>
+<a ng-click="pageView1.getGroup(1)">Get group.</a>
+
+<div class="holder">
+    <buttons-universal on-load="pageView1.init(pageView1.activeGroupId)" ng-model="pageView1.activeGroupId"></buttons-universal>
+</div>
+
+<div class="holder">
+    <table class="table-bordered universal-table">
+        <thead>
+            <tr>
+                <th class="center-align">No.</th>
+                <th class="center-align">Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="row in pageView1.shopsBooks" ng-click="pageView1.init(row.id)">
+                <td class="center-align">{{$index+1}}</td>
+                <td>{{row.title}}</td>
+                <td ng-if="row.visitors">{{row.visitors}}</td>
+                <td ng-if="row.privateWriters">{{row.privateWriters}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
