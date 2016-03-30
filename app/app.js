@@ -31,4 +31,4 @@ myApp.run(['$rootScope', '$state', '$stateParams',
 ]);
 
 angular.module('myApp.directives', []);
-angular.module('myApp.services', []);
+angular.module('myApp.services', ['ngResource']);

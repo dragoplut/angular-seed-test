@@ -13,9 +13,15 @@ angular.module('myApp.view2', ['ui.router'])
             });
     }])
 
-    .controller('View2', ['MdArr', function(MdArr) {
+    .controller('View2', ['BaseService', function(BaseService) {
         var self = this;
 
         self.p1 = 'Good news for those, who act with angular!';
+
+        self.base = BaseService.query();
+
+        self.showConsoleInfo = function () {
+            console.info(self.base);
+        };
 
     }]);
