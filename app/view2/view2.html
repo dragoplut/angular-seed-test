@@ -8,4 +8,27 @@
   <div class="btn-block">
     <button ng-click="view2.showConsoleInfo()" class="btn btn-primary">Show Base</button>
   </div>
+
+  <div class="container clients-table" ng-if="view2.base">
+      <table class="table">
+          <thead class="header">
+              <tr>
+                  <th class="center-align">#</th>
+                  <th class="center-align">Client</th>
+                  <th class="center-align">Phone No.</th>
+                  <th class="center-align">email</th>
+                  <th class="center-align">Company</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr ng-repeat="row in view2.base">
+                  <td>{{$index+1}}</td>
+                  <td>{{row.firstName}} {{row.lastName}}</td>
+                  <td>{{row.phone}}</td>
+                  <td>{{row.email}}</td>
+                  <td>{{row.company}}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
 </div>

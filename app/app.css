@@ -21,21 +21,8 @@ body {
   vertical-align: middle;
 }
 
-.navbar-left-li {
-  background-color: #f8efc0;
-  cursor: pointer;
-  font-size: 1.3em;
-  font-weight: 500;
-  padding-left: 35px;
-}
-
-.navbar-left-li:hover {
-  background-color: #c1e2b3;
-}
-
-.navbar-left-li > a {
-  color: #000;
-  text-decoration: none;
+.clients-table {
+    width: 70%;
 }
 
 .menu {
@@ -68,13 +55,35 @@ body {
 }
 
 .navbar-left {
-  background-color: beige;
+  /*background-color: beige;*/
   padding: 0;
   max-width: 600px;
 }
 
+.navbar-left-li {
+  /*background-color: #f8efc0;*/
+  cursor: pointer;
+  font-size: 1.3em;
+  font-weight: 500;
+  padding-left: 35px;
+}
+
+.navbar-left-li:hover {
+  background-color: #c1e2b3;
+}
+
+.navbar-left-li > a {
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-left-menu{
+    margin: 0;
+    padding: 0;
+}
+
 .navbar-left-title {
-  background-color: mediumspringgreen;
+  /*background-color: mediumspringgreen;*/
   color: #2b542c;
   display: block;
   font-size: 2em;

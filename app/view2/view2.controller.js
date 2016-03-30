@@ -16,9 +16,11 @@ angular.module('myApp.view2', ['ui.router'])
     .controller('View2', ['BaseService', function(BaseService) {
         var self = this;
 
+        var searchRequest = {option: 'id', request: '562b8c3ac25c700300b4b026'};
+
         self.p1 = 'Good news for those, who act with angular!';
 
-        self.base = BaseService.query();
+        self.base = BaseService.clientBase(searchRequest);
 
         self.showConsoleInfo = function () {
             console.info(self.base);
