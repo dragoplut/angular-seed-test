@@ -1,12 +1,15 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter: {{accessLevel}}
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="holder center-align">
+    <p>This is the partial for view 2.</p>
+    <p>
+        Showing of 'interpolate' filter: {{accessLevel}}
+        {{ 'Current version is v%VERSION%.' | interpolate }}
+    </p>
+</div>
 
 <div class="holder">
-  <div class="btn-block">
-    <button ng-click="view2.showConsoleInfo()" class="btn btn-primary">Show Base</button>
+  <div class="btn-block buttons-universal-block center-align">
+    <button ng-click="view2.showConsoleInfo(view2.base)" class="btn btn-primary">Show Base</button>
+    <button ng-click="view2.showConsoleInfo(view2.oneClient)" class="btn btn-primary">Show One Client</button>
   </div>
 
   <div class="container clients-table" ng-if="view2.base">
@@ -21,7 +24,7 @@
               </tr>
           </thead>
           <tbody>
-              <tr ng-repeat="row in view2.base">
+              <tr ng-repeat="row in view2.base" ng-click="view2.oneClientDetails(row)">
                   <td>{{$index+1}}</td>
                   <td>{{row.firstName}} {{row.lastName}}</td>
                   <td>{{row.phone}}</td>

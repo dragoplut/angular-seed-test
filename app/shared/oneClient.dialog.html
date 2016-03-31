@@ -1,0 +1,18 @@
+<div class="ngdialog-theme-default oneClient-dialog">
+    <div class="header center-align">
+        <span>Client Details</span>
+    </div>
+    <div class="ngdialog-content">
+        <input class="ngdialog-input" placeholder="First Name" ng-model="row.firstName" required>
+        <input class="ngdialog-input" placeholder="Last Name" ng-model="row.lastName" required>
+        <input class="ngdialog-input" placeholder="Phone" ng-model="row.phone" required>
+        <input class="ngdialog-input" placeholder="e-mail" ng-model="row.email" required>
+        <input class="ngdialog-input" placeholder="Address" ng-model="row.address" required>
+        <input class="ngdialog-input" placeholder="Company" ng-model="row.company" required>
+        <textarea class="ngdialog-content" placeholder="Description">{{row.description}}</textarea>
+    </div>
+    <div class="btn-group buttons-universal-block center-align">
+        <button class="btn btn-default">Discard changes</button>
+        <button class="btn btn-primary">Save changes</button>
+    </div>
+</div>

@@ -2,6 +2,7 @@
 
 var myApp = angular.module('myApp', [
     'ui.router',
+    'ngDialog',
     'myApp.pageView1',
     'myApp.view2',
     'myApp.services',

@@ -2,7 +2,7 @@
 
 body {
     margin: 10px auto 0;
-    width: 1200px;
+    width: 1000px;
 }
 
 .buttons-universal-block {
@@ -22,7 +22,11 @@ body {
 }
 
 .clients-table {
-    width: 70%;
+    width: 80%;
+}
+
+.clients-table tbody > tr:hover {
+    cursor: pointer;
 }
 
 .menu {
@@ -94,6 +98,18 @@ body {
   height: 50px;
   text-align: center;
   vertical-align: middle;
+}
+
+.oneClient-dialog {
+    display: block;
+    padding: 15px;
+    height: auto;
+    width: auto;
+}
+
+.oneClient-dialog input, .oneClient-dialog textarea {
+    padding-left: 10px;
+    width: 100%;
 }
 
 .universal-table body > tr:hover {
