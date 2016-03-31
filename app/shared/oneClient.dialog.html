@@ -11,8 +11,8 @@
         <input class="ngdialog-input" placeholder="Company" ng-model="row.company" required>
         <textarea class="ngdialog-content" placeholder="Description">{{row.description}}</textarea>
     </div>
-    <div class="btn-group buttons-universal-block center-align">
-        <button class="btn btn-default">Discard changes</button>
-        <button class="btn btn-primary">Save changes</button>
+    <div class="btn-group buttons-universal-block">
+        <!--<button class="btn btn-default">Discard changes</button>-->
+        <button class="btn btn-primary center-align" ng-click="clientUpdate(row)">Save changes</button>
     </div>
 </div>

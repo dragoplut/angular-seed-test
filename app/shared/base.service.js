@@ -4,7 +4,11 @@ angular.module ('myApp.services')
 
     .factory('BaseService', function ($resource) {
 
-        return $resource('http://apishop.herokuapp.com/client');
+        return $resource('http://apishop.herokuapp.com/client', {
+            'save': {method: 'POST'},
+            'update': {method: 'PUT'},
+            'remove': {method: 'DELETE'}
+        });
 
         //var clientBase = function (searchRequest) {
         //    var client;

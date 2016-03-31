@@ -30,9 +30,15 @@ angular.module('myApp.view2', ['ui.router'])
             ngDialog.open({
                 template: 'shared/oneClient.dialog.html',
                 className: 'ngdialog-theme-default',
-                showClose: false,
+                showClose: true,
                 controller: ['$scope', 'BaseService', function ($scope, BaseService){
                     $scope.row = row;
+                    $scope.clientUpdate = function (clientRow) {
+                        console.info(clientRow);
+                        delete (clientRow.id);
+                        BaseService.update(clientRow);
+                        console.info('update');
+                    };
                 }]
             });
         };
