@@ -9,10 +9,11 @@
         <input class="ngdialog-input" placeholder="e-mail" ng-model="oneRow.email" required>
         <input class="ngdialog-input" placeholder="Address" ng-model="oneRow.address" required>
         <input class="ngdialog-input" placeholder="Company" ng-model="oneRow.company" required>
-        <textarea class="ngdialog-content" placeholder="Description">{{oneRow.description}}</textarea>
+        <textarea class="ngdialog-input" placeholder="Description" ng-model="oneRow.description">{{oneRow.description}}</textarea>
     </div>
     <div class="btn-group buttons-universal-block">
         <!--<button class="btn btn-default">Discard changes</button>-->
-        <button class="btn btn-primary center-align" ng-click="clientUpdate(oneRow)">Save changes</button>
+        <button class="btn btn-primary" ng-if="oneRow.id" ng-click="clientUpdate(oneRow)">Save changes</button>
+        <button class="btn btn-primary" ng-if="!oneRow.id" ng-click="clientCreate(oneRow)">Save changes</button>
     </div>
 </div>

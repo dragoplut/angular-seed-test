@@ -2,7 +2,7 @@
 
 angular.module ('myApp.services')
 
-    .factory('BaseService', function ($http, $resource) {
+    .factory('BaseService', ['$http', '$resource', function ($http, $resource) {
 
         //return $resource('http://apishop.herokuapp.com/client');
 
@@ -19,12 +19,37 @@ angular.module ('myApp.services')
             return client.query();
         };
 
-        var clientDetailsUpdate = function (row) {
+        var clientCreate = function (data) {
+            $http({
+                url: 'http://apishop.herokuapp.com/client/',
+                method: 'POST',
+                data: data
+            }).then(function () {
+                console.info('Add to base success!');
+            });
+        };
 
+        var clientDetailsUpdate = function (id, updateData) {
+            $http({
+                url: 'http://apishop.herokuapp.com/client/' + id,
+                method: 'PUT',
+                data: updateData
+            });
+        };
+
+        var clientRemove = function (data){
+            $http({
+                url: 'http://apishop.herokuapp.com/client/' + data.id,
+                method: 'DELETE'
+            }).then(function () {
+                console.info('Client ' + data.firstName + ' ' + data.lastName + ' removed from base.');
+            });
         };
 
         return {
             clientBase: clientBase,
-            clientDetailsUpdate: clientDetailsUpdate
+            clientCreate: clientCreate,
+            clientDetailsUpdate: clientDetailsUpdate,
+            clientRemove: clientRemove
         };
-    });
+    }]);

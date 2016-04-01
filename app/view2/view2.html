@@ -9,7 +9,8 @@
 <div class="holder">
   <div class="btn-block buttons-universal-block center-align">
     <button ng-click="view2.showConsoleInfo(view2.base)" class="btn btn-primary">Show Base</button>
-    <button ng-click="view2.showConsoleInfo(view2.oneClient)" class="btn btn-primary">Show One Client</button>
+    <button class="btn btn-primary">Just Button</button>
+    <button ng-click="view2.oneClientDetails({})" class="btn btn-primary">Create new Client</button>
   </div>
 
   <div class="container clients-table" ng-if="view2.base">
@@ -17,6 +18,7 @@
           <thead class="header">
               <tr>
                   <th class="center-align">#</th>
+                  <th class="center-align">Act.</th>
                   <th class="center-align">Client</th>
                   <th class="center-align">Phone No.</th>
                   <th class="center-align">email</th>
@@ -24,8 +26,12 @@
               </tr>
           </thead>
           <tbody>
-              <tr ng-repeat="row in view2.base" ng-click="view2.oneClientDetails(row)">
+              <tr ng-repeat="row in view2.base">
                   <td>{{$index+1}}</td>
+                  <td>
+                      <i class="fa fa-pencil" ng-click="view2.oneClientDetails(row)"></i>
+                      <i class="fa fa-trash clients-table-icon" ng-click="view2.oneClientRemove(row)"></i>
+                  </td>
                   <td>{{row.firstName}} {{row.lastName}}</td>
                   <td>{{row.phone}}</td>
                   <td>{{row.email}}</td>
@@ -37,7 +43,7 @@
 </div>
 
 <div class="holder">
-    <a class="back-to-top" href="#">
+    <a class="back-to-top" href="#/view2" title="To top" onclick="window.scrollTo(0, 0)">
     <span class="fa-stack">
         <i class="fa fa-arrow-up"></i>
     </span>

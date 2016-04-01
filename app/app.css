@@ -62,6 +62,7 @@ body {
 
 .buttons-universal-block {
   display: inline-block;
+  width: 100%;
 }
 
 .buttons-universal-block button {
@@ -71,17 +72,25 @@ body {
   border-style: none;
 }
 
+.universal-table body > tr:hover {
+    cursor: pointer;
+}
+
 .center-align {
-  text-align: center;
-  vertical-align: middle;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .clients-table {
-    width: 80%;
+    width: 90%;
 }
 
 .clients-table tbody > tr:hover {
     cursor: pointer;
+}
+
+.clients-table-icon {
+    display: block;
 }
 
 .menu {
@@ -162,11 +171,21 @@ body {
     width: auto;
 }
 
+.oneClient-dialog .ngdialog-content .ngdialog-input:last-child {
+    margin-bottom: 0;
+}
+
 .oneClient-dialog input, .oneClient-dialog textarea {
     padding-left: 10px;
     width: 100%;
 }
 
-.universal-table body > tr:hover {
-  cursor: pointer;
+.oneClient-dialog .buttons-universal-block button {
+    float: right;
+    margin: 0;
 }
+
+.oneClient-dialog .buttons-universal-block button:last-of-type {
+    margin-right: 17px;
+}
+
