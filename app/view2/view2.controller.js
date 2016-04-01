@@ -22,8 +22,10 @@ angular.module('myApp.view2', ['ui.router'])
 
         self.p1 = 'Good news for those, who act with angular!';
 
-        self.base = BaseService.query();
-        self.oneClient = BaseService.query({where:{id: searchRequest.request}});
+        self.base = BaseService.clientBase();
+        self.oneClient = BaseService.clientBase(); // BaseService.clientBase({option: 'id', request: ''})
+
+
 
         self.oneClientDetails = function (row){
             console.info(row);
@@ -32,9 +34,16 @@ angular.module('myApp.view2', ['ui.router'])
                 className: 'ngdialog-theme-default',
                 showClose: true,
                 controller: ['$scope', 'BaseService', function ($scope, BaseService){
-                    $scope.row = row;
+                    $scope.oneRow = row;
                     $scope.clientUpdate = function (clientRow) {
                         console.info(clientRow);
+
+                        for (var i = 0; i < self.base.length; i++){
+                            if (self.base[i]){
+
+                            }
+                        }
+
                         delete (clientRow.id);
                         BaseService.update(clientRow);
                         console.info('update');
@@ -48,3 +57,6 @@ angular.module('myApp.view2', ['ui.router'])
         };
 
     }]);
+
+// git clone https://DragoPlut@bitbucket.org/zenthermostat/web-portal-ui.git
+// git clone git@bitbucket.org:zenthermostat/web-portal-ui.git

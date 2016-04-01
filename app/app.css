@@ -5,6 +5,61 @@ body {
     width: 1000px;
 }
 
+/*************************
+   BACK TO TOP BTN BLOCK
+*************************/
+
+.back-to-top {
+    background: transparent;
+    border: 0;
+    bottom: 65px;
+    color: #cdcdcd;
+    cursor: pointer;
+    font-size: 14px;
+    height: auto;
+    line-height: 26px;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    position: fixed;
+    right: 25px;
+    text-decoration: none;
+    transition: all .3s ease 0s;
+    z-index: 10000;
+    vertical-align: baseline;
+}
+
+.back-to-top i {
+    color: #b0b0b0;
+    font-size: 22px;
+}
+
+.back-to-top span {
+    background: transparent;
+    border: 2px solid #e8e8e8;
+    border-radius: 100%;
+    color: #cdcdcd;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 52px;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s ease 0s;
+    height: 52px;
+    width: 52px;
+}
+
+.back-to-top span:hover {
+    background-color: #e8e8e8;
+}
+
+/*************************
+      GENERAL BLOCK
+*************************/
+
 .buttons-universal-block {
   display: inline-block;
 }
