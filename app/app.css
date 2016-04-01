@@ -36,7 +36,7 @@ body {
 
 .back-to-top span {
     background: transparent;
-    border: 2px solid #e8e8e8;
+    border: 2px solid #dff0d8;
     border-radius: 100%;
     color: #cdcdcd;
     cursor: pointer;
@@ -53,7 +53,7 @@ body {
 }
 
 .back-to-top span:hover {
-    background-color: #e8e8e8;
+    background-color: #dff0d8;
 }
 
 /*************************
@@ -86,11 +86,13 @@ body {
 }
 
 .clients-table tbody > tr:hover {
-    cursor: pointer;
+    background-color: #dff0d8;
 }
 
 .clients-table-icon {
     display: block;
+    cursor: pointer;
+    margin: auto;
 }
 
 .menu {
